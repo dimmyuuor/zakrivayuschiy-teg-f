@@ -7,8 +7,8 @@
     --text-content-background: #000;
     --color-svg: #000;
     --accent-color: #00CC14;
-    --font-press-start-2p: 'PressStart2P';
-    --font-inter: 'Inter';
+    --font-press-start-2p: 'PressStart2P', Arial, sans-serif;
+    --font-inter: 'Inter', Arial, sans-serif;
     --font-weight-section-subject: 'wght' 785;
     --font-weight-section-text: 'wght' 465;
     --shadow-label-color: #000;

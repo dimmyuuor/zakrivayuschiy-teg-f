@@ -114,7 +114,7 @@
   border-block-start: 2px solid var(--accent-color);
   padding-block: 5px;
   padding-inline-start: 10px;
-  font-variation-settings: var(--font-weight-section-subject);
+  font-variation-settings: 'wght' var(--font-weight-section-subject);
 }
 
 .image {
