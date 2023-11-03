@@ -367,6 +367,11 @@
   transition: 0.3s;
 }
 
+.heart:active .core {
+  fill: red;
+  transition: 0.3s;
+}
+
 .heart .main-body {
   fill: transparent;
   transition: 0.3s;
@@ -376,22 +381,6 @@
   fill:var(--accent-color);
   transition: 0.3s;
   transition-delay: 0.05s;
-}
-
-.heart .core {
-  fill: transparent;
-  transition: 0.3s;
-  transition-delay: 0.03s;
-}
-
-.heart:active .core {
-  fill: red;
-  transition: 0.3s;
-}
-
-.heart .main-body {
-  fill: transparent;
-  transition: 0.3s;
 }
 
 .heart:active .main-body {
