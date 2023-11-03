@@ -3,6 +3,8 @@
 Будьте внимательны! Для корректной работы скриптов на этом сайте нужно, чтобы в HTML некоторые классы были названы особым образом:
 ✦ theme-dark — класс тёмной темы
 ✦ theme-light — класс светлой темы
+
+
 ✦ like-icon — для svg-иконки анимированного сердца
 ✦ card__like-button — для кнопки Like рядом с иконкой
 ✦ card__icon-button — для кнопки, оборачивающей иконку
@@ -17,4 +19,508 @@
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
+  background-image: var(--bg-image);
+  background-attachment: fixed;
+  font-family: var(--font-inter);
+  background-size: cover;
+}
+
+.header {
+  display: grid;
+  inline-size: clamp(23.188rem, 11.7339rem + 48.8710vw, 43.625rem);
+  block-size: clamp(20.188rem, 18.7433rem + 6.1642vw, 22.75rem);
+  margin: 0 auto;
+  margin-block-start: 102px;
+  background-color: var(--text-content-background);
+  font-family: var(--font-press-start-2p);
+  outline: 2px solid var(--accent-color);
+}
+
+.header_title {
+  text-transform: uppercase;
+  color: var(--accent-color);
+  font-size: clamp(3.063rem, 2.4991rem + 2.4060vw, 4.063rem);
+  font-weight: 400;
+  display: grid;
+  justify-content: center;
+  padding-block-start: clamp(7.5rem, 6.9361rem + 2.406vw, 8.5rem);
+}
+
+.header_subtitle {
+  color: var(--accent-color);
+  display: grid;
+  justify-content: center;
+  font-size: clamp(0.875rem, 0.5575rem + 1.3546vw, 1.438rem);
+  text-transform: uppercase;
+}
+
+.theme-menu {
+  display: grid;
+  justify-content: center;
+} 
+
+.theme-menu__button {
+  color: var(--accent-color);
+  background: transparent;
+  border: none;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.theme-menu__list {
+  display: grid;
+  font-size: 14px;
+  margin-block-end: 25px;
+  align-content: space-between;
+}
+
+.main {
+  margin-block-start: 104px;
+}
+
+.section {
+  position: relative;
+  margin: 0 auto;
+  display: grid;
+  inline-size: clamp(23.188rem, 11.7339rem + 48.8710vw, 43.625rem);
+}
+
+.section_about {
+  margin: 0 auto;
+  margin-block-start: 54px;
+  position: relative;
+  display: grid;
+  inline-size: clamp(23.188rem, 11.7339rem + 48.8710vw, 43.625rem);
+}
+
+.image_wrap {
+  border: 2px solid var(--accent-color);
+}
+
+.section_desc {
+  border-inline-end: 2px solid var(--accent-color);
+  border-inline-start: 2px solid var(--accent-color);
+  border-block-end: 2px solid var(--accent-color);
+  background-color: var(--text-content-background);
+  display: grid;
+}
+
+.section_subject {
+  background-color: var(--text-content-background);
+  font-size: clamp(1.125rem, 1.125rem + 0vw, 1.125rem);
+  color: var(--accent-color);
+  border-inline-end: 2px solid var(--accent-color);
+  border-inline-start: 2px solid var(--accent-color);
+  border-block-start: 2px solid var(--accent-color);
+  padding-block: 5px;
+  padding-inline-start: 10px;
+  font-variation-settings: var(--font-weight-section-subject);
+}
+
+.image {
+  block-size: 100%;
+  inline-size: 100%;
+  position: relative;
+  object-fit: cover;
+}
+
+.section_text {
+  padding-inline: 25px;
+  padding-block-start: 27px;
+  padding-block-end: 27px;
+  font-size: clamp(1.125rem, 1.125rem + 0vw, 1.125rem);
+  color: var(--accent-color);
+  font-variation-settings: var(--font-weight-section-text);
+}
+
+.section_subtext {
+  padding-inline: 25px;
+  font-size: clamp(1.125rem, 1.125rem + 0vw, 1.125rem);
+  color: var(--accent-color);
+  font-variation-settings: var(--font-weight-section-text);
+}
+
+.section_button_wrap {
+  padding-block-start: 25px;
+  padding-block-end: 25px;
+  padding-inline-end: 25px;
+  display: flex;
+  justify-content: end;
+}
+
+.card__like-button {
+  position: relative;
+  font-size: 14px;
+  background: transparent;
+  min-inline-size: 127px;
+  max-block-size: 38px;
+  font-family: var(--font-press-start-2p);
+  border: 2px solid var(--accent-color);
+  cursor: pointer;
+}
+
+.card__icon-button {
+  margin-inline-end: 5px;
+  background-color: transparent;
+  border-color: transparent;
+  max-block-size: 38px;
+  cursor: pointer;
+}
+
+.card__icon-button-save:focus {
+  outline: none;
+}
+
+.card__like-button:focus-visible {
+  box-shadow: 2px 2px 0 0 var(--accent-color);
+  transition: 0.3s;
+  transition-timing-function: ease;
+}
+
+.label_text {
+  text-transform: uppercase;
+  position: absolute;
+  mix-blend-mode: hard-light;
+  font-family: 'PressStart2P';
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--accent-color);
+  opacity: .5;
+  text-shadow: 1px 1px 1px var(--shadow-label-color);
+  z-index: 1;
+  top: 60px;
+  right: 26px;
+}
+
+@supports((text-stroke: 0.5px var(--shadow-label-color)) or (-webkit-text-stroke: 0.5px var(--shadow-label-color))) {
+  .label_text {
+      -webkit-text-stroke: 0.5px var(--shadow-label-color);
+      text-stroke: 0.5px var(--shadow-label-color);
+  }
+} 
+
+.footer {
+  display: flex;
+  justify-content: center;
+  margin-block-start: 54px;
+  margin-block-end: 105px;
+}
+
+.card__icon-button-save {
+  position: relative;
+  font-family: var(--font-press-start-2p);
+  color: var(--accent-color);
+  border: 2px solid var(--accent-color);
+  background-color: var(--text-content-background);
+  inline-size: clamp(19.125rem, 18.1026rem + 4.3621vw, 20.938rem);
+  block-size: 51px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.image_symbol {
+  inline-size: 21px;
+  block-size: 21px;
+}
+
+#floppy {
+  fill: var(--color-svg-floppy);
+  mix-blend-mode: difference;
+}
+
+.theme-menu__item {
+  position: relative;
+}
+
+.theme-menu__button:disabled::before {
+  content: '▶';
+  position: absolute;
+  right: 100px;
+  animation: arrow 0.5s infinite alternate ease-in-out;
+}
+
+.theme-menu__button:disabled {
+  opacity: .6;
+  transition: 0.3s;
+  transition-timing-function: ease;
+  pointer-events: none;
+}
+
+.theme-menu__button:hover {
+  opacity: .6;
+  transition: 0.3s;
+  transition-timing-function: ease;
+}
+
+.theme-menu__button::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 3px;
+  margin-block-start: 1px;
+  background-color: var(--accent-color);
+  transform: scaleX(0);
+  transition: none;
+}
+
+.theme-menu__button:focus-visible::after {
+  content: '';
+  width: 100%;
+  transform: scaleX(1);
+  transition: width 300ms, background-color 0.5s;
+}
+
+.theme-menu__button:focus {
+  outline: none;
+  opacity: .6;
+}
+
+.card__like-button:focus {
+  outline: none;
+}
+
+.card__icon-button-save:focus-visible {
+  box-shadow: 2px 2px 0 0 var(--accent-color);
+  transition: 0.3s;
+  transition-timing-function: ease;
+}
+
+.card__like-button::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: var(--accent-color);
+  transition: transform 0.5s ease-in-out;
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
+.card__like-button:hover::after {
+  transform: scaleX(1);
+}
+
+.card__icon-button-save::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: var(--accent-color);
+  transition: transform 0.5s ease-in-out;
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
+.card__icon-button-save:hover::after {
+  transform: scaleX(1);
+}
+
+.button__text {
+  font-size: 14px;
+  position: relative;
+  z-index: 1;
+  color: var(--button-text-color-hover);
+  mix-blend-mode: difference;
+}
+
+.button__text_save {
+  font-size: 14px;
+  position: relative;
+  z-index: 1;
+  color: var(--button-text-color-hover);
+  mix-blend-mode: difference;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.card__icon-button:focus {
+  outline: none;
+}
+
+.card__icon-button:focus-visible {
+  border: 2px solid var(--accent-color);
+  transition: 0.3s;
+  transition-timing-function: ease;
+}
+
+.sparks {
+  opacity: 0;
+}
+
+.heart .core {
+  fill: transparent;
+  transition: 0.3s;
+  transition-delay: 0.03s;
+}
+
+.heart:hover .core {
+  fill: var(--accent-color);
+  transition: 0.3s;
+}
+
+.heart .main-body {
+  fill: transparent;
+  transition: 0.3s;
+}
+
+.heart:hover .main-body {
+  fill:var(--accent-color);
+  transition: 0.3s;
+  transition-delay: 0.05s;
+}
+
+.heart .core {
+  fill: transparent;
+  transition: 0.3s;
+  transition-delay: 0.03s;
+}
+
+.heart:active .core {
+  fill: red;
+  transition: 0.3s;
+}
+
+.heart .main-body {
+  fill: transparent;
+  transition: 0.3s;
+}
+
+.heart:active .main-body {
+  fill: red;
+  transition: 0.3s;
+  transition-delay: 0.05s;
+}
+
+.like-icon {
+  width: 39px;
+  height: 36px;
+  fill: var(--accent-color);
+}
+
+.like-icon.is-liked .main-body{
+  fill: red;
+}
+
+.like-icon.is-liked .contour{
+  fill: red;
+}
+
+.like-icon.is-liked .core{
+  fill: red;
+}
+
+.like-icon.is-liked .heart {
+  animation: heart 0.3s ease-in;
+  transition: animation 0.1s;
+}
+
+.like-icon.is-liked .sparks {
+  animation: sparks 0.3s ease-in;
+  transition: animation 0.3s;
+}
+
+.dialog_popup {
+  border: 2px solid var(--accent-color);
+  background-color: var(--text-content-background);
+  font-family: var(--font-press-start-2p);
+  padding: 30px;
+  max-width: 357px;
+  min-height: min-content;
+  transition: opacity 1s ease-in-out;
+}
+
+.dialog_popup::backdrop {
+  background: rgb(0 0 0 / 0.75);
+}
+
+.dialog:not([open]) {
+  opacity: 0;
+}
+
+.dialog_popup[open] {
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  opacity: 1;
+  transition: opacity 1s ease-in-out;
+}
+
+.dialog_close-button {
+  inline-size: 100%;
+  padding: 9px;
+  background-color: #fff;
+  cursor: pointer;
+  color: var(--accent-color);
+  font-family: var(--font-press-start-2p);
+  background-color: var(--text-content-background);
+  border: 2px solid var(--accent-color);
+  text-transform: uppercase;
+  grid-column-end: 2 span;
+  margin-block-start: 30px;
+} 
+
+.dialog_text {
+  text-transform: uppercase;
+  line-height: 150%;
+  padding-left: 20px
+}
+
+.dialog_popup .image_symbol {
+  width: 39px;
+  height: 39px;
+  align-self: center;
+}
+
+.image_dog {
+  filter: saturate(200%);
+}
+
+.image_serfing {
+  filter: hue-rotate(38deg);
+}
+
+.image_mountains {
+  filter: sepia(30%) saturate(200%);
+}
+
+.image_travels {
+  filter: brightness(80%);
+}
+
+.image_jungle {
+  filter: contrast(120%);
+}
+
+.image_bike {
+  filter: opacity(0.3);
+}
+
+.image_winter {
+  filter: blur(0.1rem);
+}
+
+.image_bear {
+  filter: saturate(200%);
+}
+
+@media (width <= 375px) {
+  .card__icon-button-save {
+    block-size: 80px;
+  }
+  .image_symbol {
+    inline-size: 28px;
+    block-size: 28px;
+  }
+  .button__text_save {
+    display: grid;
+    justify-items: center;
+  }
 }

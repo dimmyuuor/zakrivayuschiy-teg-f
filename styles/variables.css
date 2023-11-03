@@ -1,1 +1,18 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+
+:root {
+    --bg-image: repeating-linear-gradient(to left, #000, rgb(0 0 0 / 0) 2px),
+    repeating-linear-gradient(to top, #000, rgb(0 0 0 / 0) 2px),
+    linear-gradient(to bottom, #007f0c 0%, #004306 100%);
+    --text-content-background: #000;
+    --color-svg: #000;
+    --accent-color: #00CC14;
+    --font-press-start-2p: 'PressStart2P';
+    --font-inter: 'Inter';
+    --font-weight-section-subject: 'wght' 785;
+    --font-weight-section-text: 'wght' 465;
+    --shadow-label-color: #000;
+    --button-text-color-hover: #00CC14;
+    --sparks-color: #FF0000;
+    --color-svg-floppy: #00CC14;
+}
