@@ -406,15 +406,15 @@
   fill: var(--accent-color);
 }
 
-.like-icon.is-liked .main-body{
+.like-icon.is-liked .main-body {
   fill: red;
 }
 
-.like-icon.is-liked .contour{
+.like-icon.is-liked .contour {
   fill: red;
 }
 
-.like-icon.is-liked .core{
+.like-icon.is-liked .core {
   fill: red;
 }
 
@@ -456,7 +456,6 @@
 .dialog_close-button {
   inline-size: 100%;
   padding: 9px;
-  background-color: #fff;
   cursor: pointer;
   color: var(--accent-color);
   font-family: var(--font-press-start-2p);
