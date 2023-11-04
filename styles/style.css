@@ -223,9 +223,6 @@
 .image_symbol {
   inline-size: 21px;
   block-size: 21px;
-}
-
-#floppy {
   fill: var(--color-svg-floppy);
   mix-blend-mode: difference;
 }
