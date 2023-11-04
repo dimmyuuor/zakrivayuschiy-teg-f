@@ -27,17 +27,6 @@
 
 .header {
   display: grid;
-  margin: 0 auto;
-  margin-block-start: 100px;
-  width: clamp(23.188rem, 11.7339rem + 48.8710vw, 43.5rem);
-  height: clamp(20.1875rem, 19.5359rem + 3.8490vw, 22.75rem);
-  background-color: var(--text-content-background);
-  outline: 2px solid var(--accent-color);
-  justify-content: center;
-}
-
-.header {
-  display: grid;
   inline-size: clamp(23.188rem, 11.7339rem + 48.8710vw, 43.625rem);
   block-size: clamp(20.188rem, 18.7433rem + 6.1642vw, 22.75rem);
   margin: 0 auto;
