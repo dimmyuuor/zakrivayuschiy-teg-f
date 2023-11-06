@@ -1,5 +1,3 @@
-/* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
-
 :root {
     --bg-image: repeating-linear-gradient(to left, #000, rgb(0 0 0 / 0) 2px), repeating-linear-gradient(to top, #000, rgb(0 0 0 / 0) 2px), linear-gradient(to bottom, #007f0c 0%, #004306 100%);
     --text-content-background: #000;

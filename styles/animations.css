@@ -1,8 +1,8 @@
-/* Опишите в этом файле все keyframes для проекта и стили анимаций иконки Like. */
 @keyframes arrow {
   0% {
       right: 100px;
   }
+  
   100% {
       right: 104px;
   }
