@@ -228,7 +228,6 @@ button {
 
 button {
   transition: 0.3s;
-  transition: width 0.3s;
 }
 
 button:focus {
