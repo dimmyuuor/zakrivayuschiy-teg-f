@@ -1,29 +1,33 @@
 /* Опишите в этом файле все keyframes для проекта и стили анимаций иконки Like. */
 @keyframes arrow {
-    0% {
+  0% {
       right: 100px;
-    }
-    100% {
-      right: 104px;
-    }
   }
+  100% {
+      right: 104px;
+  }
+}
 
 @keyframes heart {
-    0% {
+  0% {
       scale: 1;
       transform-origin: center;
-    }
-    100% {
+  }
+  100% {
       scale: 1.5;
       transform-origin: center;
-    }
   }
+}
+
+.sparks {
+  opacity: 0;
+}
 
 @keyframes sparks {
-    0% {
+  0% {
       opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
   }
+  100% {
+      opacity: 1;
+  }
+}
