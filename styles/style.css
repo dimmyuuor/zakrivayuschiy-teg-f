@@ -233,6 +233,7 @@ button {
   border: 2px solid var(--accent-color);
   background-color: var(--text-content-background);
   cursor: pointer;
+  transition: 0.3s;
 }
 
 .image_symbol {
@@ -240,10 +241,6 @@ button {
   block-size: 21px;
   fill: var(--color-svg-floppy);
   mix-blend-mode: difference;
-}
-
-button {
-  transition: 0.3s;
 }
 
 button:focus {
@@ -513,7 +510,7 @@ button:disabled {
   transform: scaleX(1);
 }
 
-.hover-a .image_saturate {
+.image_saturate {
   filter: saturate(200%);
 }
 
@@ -522,7 +519,7 @@ button:disabled {
 }
 
 .image_sepia_saturate {
-  filter: sepia(30%) saturate(200%);
+  filter: sepia(30%) grayscale(0.5);
 }
 
 .image_brightness {
@@ -537,8 +534,12 @@ button:disabled {
   filter: opacity(0.8);
 }
 
-.image_winter {
+.image_blur {
   filter: blur(0.1rem);
+}
+
+.image_invert {
+  filter: invert(0.1);
 }
 
 @media (width <= 375px) {
