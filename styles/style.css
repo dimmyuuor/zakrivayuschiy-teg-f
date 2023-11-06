@@ -95,6 +95,7 @@
 
 .image_wrap {
   border: 2px solid var(--accent-color);
+  position: relative;
 }
 
 .section_desc {
@@ -177,7 +178,7 @@
   color: var(--accent-color);
   opacity: 0.5;
   z-index: 1;
-  top: 60px;
+  top: 26px;
   right: 26px;
   text-shadow: none;
 }
@@ -555,10 +556,6 @@ button:disabled {
   .button__text_save {
       display: grid;
       justify-items: center;
-  }
-  .label_text_article {
-    top: 80px;
-    right: 12px;
   }
 
   .section_text {
