@@ -19,10 +19,6 @@
   }
 }
 
-.sparks {
-  opacity: 0;
-}
-
 @keyframes sparks {
   0% {
       opacity: 0;
@@ -32,52 +28,58 @@
   }
 }
 
-.theme-menu__button:disabled::before {
-  content: "▶";
-  position: absolute;
-  top: 0;
-  right: 90px;
-  animation: arrow 0.5s infinite alternate ease-in-out;
+.sparks {
+  opacity: 0;
 }
 
-.theme-menu__button:disabled {
-  opacity: 0.6;
-  pointer-events: none;
+.heart .core {
+  fill: transparent;
+  transition: 0.3s linear;
+  transition-delay: 0.03s;
 }
 
-.theme-menu__button::after {
-  content: "";
-  display: block;
-  width: 0;
-  height: 2px;
-  margin-block-start: 3px;
-  background-color: var(--accent-color);
-  transform: scaleX(0);
-  transition: width 0.3s;
+.heart:hover .core {
+  fill: var(--accent-color);
+  transition: 0.3s linear;
 }
 
-.theme-menu__button:focus-visible::after {
-  content: "";
-  width: 100%;
-  transform: scaleX(1);
+.heart:active .core {
+  fill: red;
+  transition: 0.3s linear;
 }
 
-.hover_animation::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: block;
-  width: 100%;
-  height: 100%;
-  background-color: var(--accent-color);
-  transition: transform 0.5s ease-in-out;
-  transform: scaleX(0);
-  transform-origin: left;
+.heart .main-body {
+  fill: transparent;
+  transition: 0.3s linear;
 }
 
-.hover_animation:hover::after {
-  transform: scaleX(1);
+.heart:hover .main-body {
+  fill: var(--accent-color);
+  transition: 0.3s linear;
+  transition-delay: 0.05s;
+}
+
+.heart:active .main-body {
+  fill: red;
+  transition: 0.3s linear;
+  transition-delay: 0.05s;
+}
+
+.like-icon.is-liked .main-body {
+  fill: red;
+  transition: 0.3s linear;
+  transition-delay: 0.3s;
+}
+
+.like-icon.is-liked .contour {
+  fill: red;
+  transition: 0.3s linear;
+  transition-delay: 0.06s;
+}
+
+.like-icon.is-liked .core {
+  fill: red;
+  transition: 0.3s linear;
 }
 
 .like-icon.is-liked .heart {

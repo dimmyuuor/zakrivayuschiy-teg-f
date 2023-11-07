@@ -23,7 +23,7 @@
   background-position: center;
   background-attachment: fixed;
   font-family: var(--font-main), Arial, Helvetica, sans-serif;
-  font-variation-settings: "wght" 785;
+  font-variation-settings: var(--font-weight-section-text);
 }
 
 .header {
@@ -40,7 +40,6 @@
   text-transform: uppercase;
   color: var(--accent-color);
   font-size: clamp(3.063rem, 2.4991rem + 2.406vw, 4.063rem);
-  font-weight: 400;
   display: grid;
   justify-content: center;
   margin-block-start: clamp(7.5rem, 6.9361rem + 2.406vw, 8.5rem);
@@ -94,8 +93,38 @@
   opacity: 0.6;
 }
 
+.theme-menu__button:disabled::before {
+  content: "▶";
+  position: absolute;
+  top: 0;
+  right: 90px;
+  animation: arrow 0.5s infinite alternate ease-in-out;
+}
+
+.theme-menu__button:disabled {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
 .theme-menu__button:hover {
   opacity: 0.6;
+}
+
+.theme-menu__button::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  margin-block-start: 3px;
+  background-color: var(--accent-color);
+  transform: scaleX(0);
+  transition: width 0.3s;
+}
+
+.theme-menu__button:focus-visible::after {
+  content: "";
+  width: 100%;
+  transform: scaleX(1);
 }
 
 .main {
@@ -139,7 +168,7 @@
   border-block-start: 2px solid var(--accent-color);
   padding-block: 5px;
   padding-inline-start: 10px;
-  font-variation-settings: "wght" var(--font-weight-section-subject);
+  font-variation-settings: var(--font-weight-section-subject);
 }
 
 .image {
@@ -153,9 +182,10 @@
 .section_text_style {
   color: var(--accent-color);
   font-variation-settings: var(--font-weight-section-text);
-  padding-inline: 25px;
+  padding-inline: 24px;
   font-size: clamp(1.125rem, 1.125rem + 0vw, 1.125rem);
   padding-block-start: 25px;
+  line-height: 21px;
 }
 
 .section_button_wrap {
@@ -188,7 +218,7 @@
   box-shadow: 2px 2px 0 0 var(--accent-color);
 }
 
-.hover_animation {
+.hover_focus_animation_button {
   border: 2px solid var(--accent-color);
   font-family: var(--font-accent);
   color: var(--accent-color);
@@ -198,12 +228,30 @@
   transition: 0.3s;
 }
 
-.hover_animation:focus {
+.hover_focus_animation_button:focus {
   outline: none;
 }
 
-.hover_animation:focus-visible {
+.hover_focus_animation_button:focus-visible {
   box-shadow: 2px 2px 0 0 var(--accent-color);
+}
+
+.hover_focus_animation_button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: var(--accent-color);
+  transition: transform 0.5s ease-in-out;
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
+.hover_focus_animation_button:hover::after {
+  transform: scaleX(1);
 }
 
 .label_text {
@@ -278,56 +326,6 @@
   width: 39px;
   height: 36px;
   fill: var(--accent-color);
-}
-
-.heart .core {
-  fill: transparent;
-  transition: 0.3s linear;
-  transition-delay: 0.03s;
-}
-
-.heart:hover .core {
-  fill: var(--accent-color);
-  transition: 0.3s linear;
-}
-
-.heart:active .core {
-  fill: red;
-  transition: 0.3s linear;
-}
-
-.heart .main-body {
-  fill: transparent;
-  transition: 0.3s linear;
-}
-
-.heart:hover .main-body {
-  fill: var(--accent-color);
-  transition: 0.3s linear;
-  transition-delay: 0.05s;
-}
-
-.heart:active .main-body {
-  fill: red;
-  transition: 0.3s linear;
-  transition-delay: 0.05s;
-}
-
-.like-icon.is-liked .main-body {
-  fill: red;
-  transition: 0.3s linear;
-  transition-delay: 0.3s;
-}
-
-.like-icon.is-liked .contour {
-  fill: red;
-  transition: 0.3s linear;
-  transition-delay: 0.06s;
-}
-
-.like-icon.is-liked .core {
-  fill: red;
-  transition: 0.3s linear;
 }
 
 .dialog_popup {
