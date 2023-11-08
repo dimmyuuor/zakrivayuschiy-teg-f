@@ -24,7 +24,7 @@
   background-attachment: fixed;
   font-family: var(--font-main), Arial, Helvetica, sans-serif;
   font-variation-settings: "wght" var(--font-weight-section-text); 
-  /* указал "wght" для font-variation-settings так как автотесты без "wght" указывают что свойство отсутствует */
+  /* перенёс "wght" из переменных в свойство font-variation-settings так как автотесты указывают, что свойство font-variation-settings отсутсвует */
 }
 
 .header {
@@ -169,7 +169,7 @@
   border-block-start: 2px solid var(--accent-color);
   padding-block: 5px;
   padding-inline-start: 10px;
-  font-variation-settings: var(--font-weight-section-subject);
+  font-variation-settings: "wght" var(--font-weight-section-subject);
 }
 
 .image {
@@ -182,7 +182,7 @@
 
 .section_text_style {
   color: var(--accent-color);
-  font-variation-settings: var(--font-weight-section-text);
+  font-variation-settings: "wght" var(--font-weight-section-text);
   padding-inline: 24px;
   font-size: clamp(1.125rem, 1.125rem + 0vw, 1.125rem);
   padding-block-start: 23px;

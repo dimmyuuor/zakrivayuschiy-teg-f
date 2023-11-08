@@ -4,8 +4,8 @@
     --accent-color: #00cc14;
     --font-accent: "PressStart2P";
     --font-main: "Inter";
-    --font-weight-section-subject: "wght" 785;
-    --font-weight-section-text: "wght" 465;
+    --font-weight-section-subject: 785;
+    --font-weight-section-text: 465;
     --color-svg: #000;
     --shadow-label-color: #000;
     --button-text-color-hover: #00cc14;
@@ -20,8 +20,8 @@
     --button-color: #000;
     --font-accent: "PressStart2P";
     --font-main: "Inter";
-    --font-weight-section-subject: "wght" 700;
-    --font-weight-section-text: "wght" 400;
+    --font-weight-section-subject: 700;
+    --font-weight-section-text: 400;
     --color-svg: #fff;
     --shadow-label-color: #fff;
     --button-text-color-hover: #fff;
@@ -37,8 +37,8 @@
         --button-color: #000;
         --font-accent: "PressStart2P";
         --font-main: "Inter";
-        --font-weight-section-subject: "wght" 700;
-        --font-weight-section-text: "wght" 400;
+        --font-weight-section-subject: 700;
+        --font-weight-section-text: 400;
         --color-svg: #fff;
         --shadow-label-color: #fff;
         --button-text-color-hover: #fff;
