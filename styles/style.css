@@ -23,7 +23,8 @@
   background-position: center;
   background-attachment: fixed;
   font-family: var(--font-main), Arial, Helvetica, sans-serif;
-  font-variation-settings: var(--font-weight-section-text);
+  font-variation-settings: "wght" var(--font-weight-section-text); 
+  /* указал "wght" для font-variation-settings так как автотесты без "wght" указывают что свойство отсутствует */
 }
 
 .header {
@@ -184,7 +185,7 @@
   font-variation-settings: var(--font-weight-section-text);
   padding-inline: 24px;
   font-size: clamp(1.125rem, 1.125rem + 0vw, 1.125rem);
-  padding-block-start: 25px;
+  padding-block-start: 23px;
   line-height: 21px;
 }
 
